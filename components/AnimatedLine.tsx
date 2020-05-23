@@ -1,4 +1,4 @@
-import { Colors } from './../constants'
+import { Colors } from '../pages/constants'
 
 const LINE_HEIGHT = 5;
 

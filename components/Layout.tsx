@@ -1,8 +1,14 @@
 import Head from 'next/head'
-import Navigation from './../components/Navigation'
-import { Colors } from './../constants'
+import Navigation from './Navigation'
+import { Colors } from '../pages/constants'
 
-const Layout = ({ pageTitle, children }: { pageTitle: string, children: React.ReactNode }) => {
+
+type Props = {
+  pageTitle: string,
+  children: React.ReactNode,
+}
+
+const Layout = ({ pageTitle, children }: Props) => {
   return (
     <div className='container'>
       <Head>

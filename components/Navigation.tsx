@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Colors } from './../constants'
+import { Colors } from '../pages/constants'
 
 const NavLink = ({ to, text, selected }: { to: string, text: string, selected: boolean }) => {
   return (

@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Colors } from './constants'
-import AnimatedLine from './components/AnimatedLine'
-import Layout from './components/Layout'
+import AnimatedLine from '../components/AnimatedLine'
+import Layout from '../components/Layout'
 
 const SocialLinks = () => {
   return (

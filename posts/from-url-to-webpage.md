@@ -1,7 +1,5 @@
 ---
 title: 'From URL to web page: walk through to Django'
-author: Tim Kholod
-date: 14 Aug 2017
 ---
 
 Understanding is one of the most important things when learning to code.
@@ -12,7 +10,9 @@ Here I want to show you what `urls.py` and `views.py` are for, and how they help
 
 Let's figure it out:
 
-![](/post-img/from_url_to_webpage/urls.png)
+<div style="max-width: 700px; margin: 0 auto;">
+  <img src="/post-img/from_url_to_webpage/1.png">
+</div>
 
 Say we open **https://cats.com/cats/** in our browser.
 
@@ -27,7 +27,7 @@ According to this rule, Django knows which view must be used to handle a request
 Django calls the `show_all_cats` function (which comes from `views.py`).
 Which in turn renders the `cats.html` template.
 
-(For more details about the dictionary in the `render` function, see [What the curly hell do you pass into \`render\`?](/blog/models-relationships))
+(For more details about the dictionary in the `render` function, see [What the curly hell do you pass into \`render\`?](/blog/curlu-hell-render))
 
 And finally, we are full of love for the beautiful purr-y creatures.
 
@@ -35,4 +35,4 @@ And finally, we are full of love for the beautiful purr-y creatures.
 
 **See also:**
 
-- [The simple way to understand Django models](/django-models/)
+- [The simple way to understand Django models](/blog/django-models)

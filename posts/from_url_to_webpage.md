@@ -12,7 +12,7 @@ Here I want to show you what `urls.py` and `views.py` are for, and how they help
 
 Let's figure it out:
 
-![](../post-img/from_url_to_webpage//urls.png)
+![](/post-img/from_url_to_webpage/urls.png)
 
 Say we open **https://cats.com/cats/** in our browser.
 
@@ -27,7 +27,7 @@ According to this rule, Django knows which view must be used to handle a request
 Django calls the `show_all_cats` function (which comes from `views.py`).
 Which in turn renders the `cats.html` template.
 
-(For more details about the dictionary in the `render` function, see [What the curly hell do you pass into \`render\`?](/curlu-hell-render/))
+(For more details about the dictionary in the `render` function, see [What the curly hell do you pass into \`render\`?](/blog/models-relationships))
 
 And finally, we are full of love for the beautiful purr-y creatures.
 

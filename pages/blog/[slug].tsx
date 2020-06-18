@@ -2,19 +2,43 @@ import ReactMarkdown from 'react-markdown'
 import { GetStaticProps, GetStaticPaths } from "next"
 
 import * as blogData from "../../data-util/blog"
-import config from "../../site-config";
-import Layout from '../../components/Layout';
+import { Colors } from '../../components/constants';
+import { PostLayout } from '../../components/PostLayout';
 
 type Props = { post: blogData.BlogPost };
 const Post = ({ post }: Props) => {
-  const siteTitle = config.siteTitle;
   return (
-    <div>
-      <Layout pageTitle={post.frontmatter.title}>
+    <PostLayout pageTitle={`TK: ${post.frontmatter.title}`}>
+      <h3>{post.frontmatter.title}</h3>
+      <div className='text'>
         <ReactMarkdown source={post.markdownBody} />
-      </Layout>
+      </div>
 
-    </div>
+      <style jsx global>{`
+        .text {
+          font-family: 'Titillium Web', sans-serif;
+          font-size: 22px;
+          margin-right: 150px;
+        }
+
+        .text p:first-of-type {
+          margin-top: 0;
+        }
+
+        .text a {
+          color: ${Colors.yellow};
+        }
+
+        .text code {
+          background: ${Colors.grey};
+        }
+
+        .text img {
+          width: 100%;
+        }
+
+      `}</style>
+    </PostLayout>
   )
 }
 

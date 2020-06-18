@@ -1,22 +1,22 @@
 import { useEffect, useState } from 'react'
-import { Colors } from './constants'
-import AnimatedLine from '../components/AnimatedLine'
+import { Colors } from '../components/constants'
+import { AnimatedLine } from '../components/Lines'
 import Layout from '../components/Layout'
 
 const SocialLinks = () => {
   return (
     <div className='social-links'>
       <a href='https://github.com/arevej' target="_blank">
-        <img src='/img/git.svg' width={30} height={30} />
+        <img src='/utils/git.svg' width={30} height={30} />
       </a>
       <a href='https://www.instagram.com/arevej/' target="_blank">
-        <img src='/img/inst.svg' width={30} height={30} />
+        <img src='/utils/inst.svg' width={30} height={30} />
       </a>
       <a href='https://twitter.com/whyimsoalone' target="_blank">
-        <img src='/img/twi.svg' width={30} height={30} />
+        <img src='/utils/twi.svg' width={30} height={30} />
       </a>
       <a href='mailto:tim@arevej.me' target="_blank">
-        <img src='/img/mail.svg' width={30} height={30} />
+        <img src='/utils/mail.svg' width={30} height={30} />
       </a>
 
       <style jsx>{`
@@ -59,11 +59,11 @@ const About = () => {
       <div className='content-container'>
         <div className='intro-container'>
           <div className='intro'>
-            <h3>
+            <h2>
               Hey,
                <br />
                 I’m <span style={{ color: Colors.yellow }}>Tim Kholod</span>
-            </h3>
+            </h2>
             <span>
               doing software
             </span>
@@ -78,7 +78,7 @@ const About = () => {
 
         <div>
           <div className='avatar-container'>
-            <img src='/img/avatar.png' width={250} height={250} />
+            <img src='/utils/avatar.png' width={250} height={250} />
             <SocialLinks />
           </div>
         </div>
@@ -112,7 +112,7 @@ const About = () => {
           cursor: default;
         }
 
-        .intro > h3 {
+        .intro > h2 {
           font-size: 56px;
           margin-top: 0;
           margin-bottom: 10px;

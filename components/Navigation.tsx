@@ -1,26 +1,34 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-import { Colors } from '../pages/constants'
+import { Colors } from './constants'
 
-const NavLink = ({ to, text, selected }: { to: string, text: string, selected: boolean }) => {
+const NavLink = ({
+  to,
+  text,
+  selected
+}: {
+  to: string
+  text: string
+  selected: boolean
+}) => {
   return (
     <Link href={to}>
       <a className='navigation-link'>
         {text}
 
         <style jsx>{`
-        .navigation-link {
-          color: ${selected ? Colors.yellow : Colors.blue};
-          text-decoration: none;
-          font-size: 28px;
-          padding-bottom: 4px;
-        }
+          .navigation-link {
+            color: ${selected ? Colors.yellow : Colors.blue};
+            text-decoration: none;
+            font-size: 28px;
+            padding-bottom: 4px;
+          }
 
-        .navigation-link:hover {
-          color: ${Colors.yellow};
-          transition: all 0.4s;
-        }
-      `}</style>
+          .navigation-link:hover {
+            color: ${Colors.yellow};
+            transition: all 0.4s;
+          }
+        `}</style>
       </a>
     </Link>
   )
@@ -28,35 +36,24 @@ const NavLink = ({ to, text, selected }: { to: string, text: string, selected: b
 
 const Navigation = () => {
   const router = useRouter()
-  const isSelected = (path: string) => router.pathname === path
+  const isSelected = (path: string) => router.pathname.split('/')[1] === path
 
   return (
     <div className='navigation'>
-      <NavLink
-        to='/'
-        text='about'
-        selected={isSelected('/')}
-      />
+      <NavLink to='/' text='about' selected={isSelected('')} />
       <NavLink
         to='/portfolio'
         text='portfolio'
-        selected={isSelected('/portfolio')}
+        selected={isSelected('portfolio')}
       />
-      <NavLink
-        to='/cv'
-        text='cv'
-        selected={isSelected('/cv')}
-      />
-      <NavLink
-        to='/blog'
-        text='blog'
-        selected={isSelected('/blog')}
-      />
+      <NavLink to='/cv' text='cv' selected={isSelected('cv')} />
+      <NavLink to='/blog' text='blog' selected={isSelected('blog')} />
 
       <style jsx>{`
         .navigation {
           display: flex;
           flex-direction: column;
+          position: fixed;
         }
       `}</style>
     </div>

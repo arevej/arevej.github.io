@@ -47,7 +47,7 @@ const Navigation = () => {
         text='portfolio'
         selected={isSelected('portfolio')}
       />
-      <NavLink to='/cv' text='cv' selected={isSelected('cv')} />
+      <NavLink to='/cv.pdf' text='cv' selected={isSelected('cv')} />
       <NavLink to='/blog' text='blog' selected={isSelected('blog')} />
 
       <style jsx>{`

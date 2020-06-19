@@ -2,10 +2,9 @@ import Head from 'next/head'
 import Navigation from './Navigation'
 import { Colors } from './constants'
 
-
 type Props = {
-  pageTitle: string,
-  children: React.ReactNode,
+  pageTitle: string
+  children: React.ReactNode
 }
 
 const Layout = ({ pageTitle, children }: Props) => {
@@ -13,8 +12,14 @@ const Layout = ({ pageTitle, children }: Props) => {
     <div className='container'>
       <Head>
         <title>{pageTitle}</title>
-        <link href='https://fonts.googleapis.com/css2?family=Amaranth&display=swap' rel='stylesheet'></link>
-        <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet"></link>
+        <link
+          href='https://fonts.googleapis.com/css2?family=Amaranth&display=swap'
+          rel='stylesheet'
+        ></link>
+        <link
+          href='https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap'
+          rel='stylesheet'
+        ></link>
       </Head>
       <Navigation />
       {children}
@@ -25,6 +30,7 @@ const Layout = ({ pageTitle, children }: Props) => {
           display: flex;
           flex-direction: row;
           min-height: 100vh;
+          cursor: default;
         }
 
         @media (max-width: 600px) {
@@ -43,7 +49,7 @@ const Layout = ({ pageTitle, children }: Props) => {
           margin: 0;
           font-family: 'Amaranth', sans-serif;
           letter-spacing: 0.5px;
-          color: ${Colors.blue}
+          color: ${Colors.blue};
         }
 
         * {
@@ -54,4 +60,4 @@ const Layout = ({ pageTitle, children }: Props) => {
   )
 }
 
-export default Layout;
+export default Layout

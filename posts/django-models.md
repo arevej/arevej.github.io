@@ -1,5 +1,6 @@
 ---
 title: 'The simple way to understand Django models'
+date: '18 Aug 2017'
 ---
 
 If you ever tried to learn models by going through Django Docs, did you leave with answers, or with even more questions?

@@ -22,6 +22,7 @@ const NavLink = ({
             text-decoration: none;
             font-size: 28px;
             padding-bottom: 4px;
+            user-select: none;
           }
 
           .navigation-link:hover {
@@ -54,6 +55,7 @@ const Navigation = () => {
           display: flex;
           flex-direction: column;
           position: fixed;
+          z-index: 100;
         }
       `}</style>
     </div>

@@ -1,5 +1,6 @@
 ---
 title: 'What are model relationships in Django for?'
+date: '23 Sep 2017'
 ---
 
 Relationships between people are complicated; what about between models?

@@ -1,5 +1,6 @@
 ---
 title: 'What the curly hell do you pass into `render`?'
+date: '25 Jul 2017'
 ---
 
 Back when I started to learn Django, everything seemed so tough.

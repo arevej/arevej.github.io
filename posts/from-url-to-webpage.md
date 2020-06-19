@@ -1,5 +1,6 @@
 ---
 title: 'From URL to web page: walk through to Django'
+date: '14 Aug 2017'
 ---
 
 Understanding is one of the most important things when learning to code.

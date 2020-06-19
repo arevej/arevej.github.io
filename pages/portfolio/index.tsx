@@ -1,4 +1,3 @@
-import { Colors } from '../../components/constants'
 import { Line } from '../../components/Lines'
 import Layout from '../../components/Layout'
 import { useState } from 'react'

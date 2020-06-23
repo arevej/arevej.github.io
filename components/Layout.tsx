@@ -40,7 +40,7 @@ const Layout = ({ pageTitle, children }: Props) => {
           }
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 375px) {
           .container {
             padding: 40px;
           }

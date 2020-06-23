@@ -9,6 +9,7 @@ const portfolioData = [
     id: 1,
     projectName: 'andreiucop.com',
     image: '/portfolio/ucop.png',
+    alt: 'Screenshot of Andrei Juradowich website',
     description:
       'I implemented a personal website for Andrei Juradowich. This project has animated slideshows, embedded Vimeo players, responsive design. Since the client is a designer, one of the requirements was making the top-level component structure easily understandable and editable.',
     demoLink: 'http://andreiucop.com/'
@@ -17,6 +18,7 @@ const portfolioData = [
     id: 2,
     projectName: 'crclm',
     image: '/portfolio/crclm.png',
+    alt: 'Screenshot of main page of crclm',
     description: 'A task management app.',
     demoLink: 'https://crclm.netlify.com/'
   },
@@ -24,6 +26,7 @@ const portfolioData = [
     id: 3,
     projectName: 'aprendES',
     image: '/portfolio/aprendes.png',
+    alt: 'Screenshot of main page of aprendes',
     description:
       'aprendES is a web application for learning Spanish online. It’s work-in-progress and it’s meant to combine my development skills with the teaching approaches that I found to work well. It has several types of exercises and a design, both of which I came up with by myself.',
     demoLink: 'https://hopeful-kirch-e17f2e.netlify.com/'
@@ -31,6 +34,7 @@ const portfolioData = [
   {
     id: 4,
     projectName: 'apptv',
+    alt: 'Screenshot of main page of apptv',
     image: '/portfolio/apptv.png',
     description: (
       <ul>
@@ -50,6 +54,7 @@ const portfolioData = [
     id: 5,
     projectName: 'MacOS-like Desktop on the web',
     image: '/portfolio/desktop.png',
+    alt: 'Screenshot of MacOS-like Desktop on the web',
     description: (
       <ul>
         <p>
@@ -62,14 +67,6 @@ const portfolioData = [
       </ul>
     ),
     demoLink: 'https://sad-spence-442c98.netlify.com/'
-  },
-  {
-    id: 6,
-    projectName: 'laptop configurator',
-    image: '/portfolio/laptop.png',
-    description:
-      'Inspired by Apple’s MacBook customizer, I made a fully-featured replica.',
-    demoLink: 'https://heuristic-roentgen-325c1d.netlify.com/'
   }
 ]
 
@@ -117,7 +114,7 @@ const Portfolio = () => {
             <div>{project.description}</div>
             <div className='image'>
               <a href={project.demoLink} target='_blank'>
-                <img src={project.image} width={400} />
+                <img src={project.image} alt={project.alt} />
               </a>
             </div>
           </div>
@@ -196,6 +193,10 @@ const Portfolio = () => {
           user-select: none;
         }
 
+        .image img {
+          max-width: 100%;
+        }
+
         .name {
           width: 40%;
           text-align: right;
@@ -206,6 +207,33 @@ const Portfolio = () => {
 
         .button-placeholder {
           height: 88px;
+        }
+
+        @media (max-width: 1024px) {
+          .project-info {
+            flex-direction: column;
+          }
+
+          :global(.styled-line) {
+            display: none;
+          }
+
+          .description {
+            width: 100%;
+            margin-left: 0;
+            flex-direction: column-reverse;
+          }
+
+          .image {
+            margin-bottom: 20px;
+          }
+
+          .name {
+            width: 100%;
+            text-align: center;
+            margin-right: 0;
+            margin-top: 0;
+          }
         }
       `}</style>
     </Layout>

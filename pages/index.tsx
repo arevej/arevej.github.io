@@ -7,16 +7,21 @@ const SocialLinks = () => {
   return (
     <div className='social-links'>
       <a href='https://github.com/arevej' target='_blank'>
-        <img src='/utils/git.svg' width={30} height={30} />
+        <img src='/utils/git.svg' width={30} height={30} alt='github logo' />
       </a>
       <a href='https://www.instagram.com/arevej/' target='_blank'>
-        <img src='/utils/inst.svg' width={30} height={30} />
+        <img
+          src='/utils/inst.svg'
+          width={30}
+          height={30}
+          alt='instagram logo'
+        />
       </a>
       <a href='https://twitter.com/whyimsoalone' target='_blank'>
-        <img src='/utils/twi.svg' width={30} height={30} />
+        <img src='/utils/twi.svg' width={30} height={30} alt='twitter logo' />
       </a>
       <a href='mailto:tim@arevej.me' target='_blank'>
-        <img src='/utils/mail.svg' width={30} height={30} />
+        <img src='/utils/mail.svg' width={30} height={30} alt='envelope' />
       </a>
 
       <style jsx>{`
@@ -67,7 +72,12 @@ const About = () => {
       <div className='content-container'>
         <div>
           <div className='avatar-container'>
-            <img src='/utils/avatar.png' width={250} height={250} />
+            <img
+              src='/utils/avatar.png'
+              width={250}
+              height={250}
+              alt='The picture of Tim Kholod with skies and house on the background'
+            />
             <SocialLinks />
           </div>
         </div>

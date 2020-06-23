@@ -154,6 +154,7 @@ const About = () => {
           .intro {
             margin-left: 0;
             text-align: center;
+            margin-bottom: 20px;
           }
 
           .intro > h2 {

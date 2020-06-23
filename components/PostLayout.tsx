@@ -30,6 +30,7 @@ export const PostLayout = ({
         .group-container {
           display: flex;
           flex-direction: column;
+          max-width: 600px;
         }
 
         :global(.group-container h3) {
@@ -38,10 +39,14 @@ export const PostLayout = ({
           margin-bottom: 25px;
         }
 
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
-            flex-direction: column;
+        @media (max-width: 1024px) {
+          .container {
+            padding-top: 30px;
+            justify-content: center;
+          }
+
+          :global(.styled-line) {
+            display: none;
           }
         }
       `}</style>

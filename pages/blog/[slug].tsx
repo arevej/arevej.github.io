@@ -18,7 +18,6 @@ const Post = ({ post }: Props) => {
         .text {
           font-family: 'Titillium Web', sans-serif;
           font-size: 22px;
-          margin-right: 150px;
         }
 
         .text h2 {
@@ -27,6 +26,11 @@ const Post = ({ post }: Props) => {
 
         .text h3 {
           font-size: 26px !important;
+        }
+
+        .text ul {
+          margin-bottom: 0;
+          padding-bottom: 0;
         }
 
         .text p:first-of-type {
@@ -46,7 +50,15 @@ const Post = ({ post }: Props) => {
         }
 
         .text img {
+          display: block;
+          margin: 0 auto;
           width: 100%;
+        }
+
+        @media (max-width: 1024px) {
+          .language-python {
+            font-size: 2.5vw;
+          }
         }
       `}</style>
     </PostLayout>

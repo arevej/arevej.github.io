@@ -18,24 +18,18 @@ If you don't know much about them, read [the other post of mine](/blog/django-mo
 
 Imagine this: Mike has a cat named Luna.
 
-<div style="max-width: 320px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/1.png">
-</div>
+<img style="max-width: 320px;" src="/post-img/models_relationships/1.png">
 
 Mike **has only one cat**, Luna, and Luna **has only one owner**, Mike.
 Such relationships are called **one-to-one**.
 
 How can we implement it in code?
 
-<div style="max-width: 600px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/2.png">
-</div>
+<img style="max-width: 600px;" src="/post-img/models_relationships/2.png">
 
 In database it will look like this:
 
-<div style="max-width: 600px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/3.png">
-</div>
+<img style="max-width: 600px;" src="/post-img/models_relationships/3.png">
 
 Luna has the same `id` as their owner (and no `id` of its own)
 
@@ -71,24 +65,18 @@ Other examples of one-to-one:
 Let's look another example.
 People can **have a lot of cats**.
 
-<div style="max-width: 450px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/4.png">
-</div>
+<img style="max-width: 450px;" src="/post-img/models_relationships/4.png">
 
 Eva has three cats: Luna, Jasper, and Max.
 The relationship between Eva and their cats is called **many-to-one** or **one-to-many**.
 
 In code:
 
-<div style="max-width: 600px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/5.png">
-</div>
+<img style="max-width: 600px;" src="/post-img/models_relationships/5.png">
 
 And in database:
 
-<div style="max-width: 600px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/6.png">
-</div>
+<img style="max-width: 600px;" src="/post-img/models_relationships/6.png">
 
 You can now create as many cats for a particular person as you want:
 
@@ -126,24 +114,18 @@ Other examples of many-to-one:
 
 Earth has finally embraced polyamory and shit.
 
-<div style="max-width: 450px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/7.png">
-</div>
+<img style="max-width: 450px;" src="/post-img/models_relationships/7.png">
 
 So now one cat **has many owners** and one owner **has many cats**.
 Here we have three owners: Eva, Alex and Mike.
 Eva has Max and Luna; Alex – Max, Luna, and Jasper; Mike – Tigger and Max.
 You can notice that Max has three owners: Eva, Alex, and Mike.
 
-<div style="max-width: 600px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/8.png">
-</div>
+<img style="max-width: 600px;" src="/post-img/models_relationships/8.png">
 
 In database:
 
-<div style="max-width: 600px; margin: 0 auto;">
-  <img src="/post-img/models_relationships/9.png">
-</div>
+<img style="max-width: 600px;" src="/post-img/models_relationships/9.png">
 
 Pay attention to extra orange table which will be created automatically. This extra table creates relationships between models.
 
@@ -151,7 +133,7 @@ So how do we create such polyamory relationships?
 
 First of all we should create cats and owners like this:
 
-```
+```python
 owner = Owner(name = 'Eva')
 owner.save()
 ...
@@ -163,13 +145,13 @@ cat.save()
 
 The immoral polyamory emerges:
 
-```
+```python
 owner.cats.add(cat)
 ```
 
 And here's how we can inspect this relationship by listing all owners of a cat, or all cats of a particular owner:
 
-```
+```python
 owner.cats.all() # [cat]
 cat.owners.all() # [owner]
 ```

@@ -13,9 +13,8 @@ const NavLink = ({
 }) => {
   return (
     <Link href={to}>
-      <a className='navigation-link'>
-        {text}
-
+      <div>
+        <a className='navigation-link'>{text}</a>
         <style jsx>{`
           .navigation-link {
             color: ${selected ? Colors.yellow : Colors.blue};
@@ -23,6 +22,7 @@ const NavLink = ({
             font-size: 28px;
             padding-bottom: 4px;
             user-select: none;
+            cursor: pointer;
           }
 
           .navigation-link:hover {
@@ -30,7 +30,7 @@ const NavLink = ({
             transition: all 0.4s;
           }
         `}</style>
-      </a>
+      </div>
     </Link>
   )
 }

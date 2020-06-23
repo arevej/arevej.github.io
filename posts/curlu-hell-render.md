@@ -12,9 +12,7 @@ How the `render` function and the context dictionary that you pass into it play 
 I realize I'm probably not the only one experiencing this problem.
 So here's a simple mental model that I came to, which made everything click:
 
-<div style="max-width: 700px; margin: 0 auto;">
-  <img src="/post-img/curlu-hell-render/1.png">
-</div>
+<img style="max-width: 700px;" src="/post-img/curlu-hell-render/1.png">
 
 The first one, `index.html`, is the most obvious.
 It specifies the name of the HTML template to be rendered.

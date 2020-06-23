@@ -7,9 +7,7 @@ If you ever tried to learn models by going through Django Docs, did you leave wi
 
 Personally, I started doubting whether programming is really for me.
 
-<div style="max-width: 300px; margin: 0 auto;">
-  <img src="https://media.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif">
-</div>
+<img style="max-width: 300px;" src="https://media.giphy.com/media/Nm8ZPAGOwZUQM/giphy.gif">
 
 I wrote this post to help you understand Django models and basic operations with them.
 
@@ -20,17 +18,13 @@ We would create a `Cat` model, but what is a model anyway?
 
 Turns out, a model is kinda three things in one:
 
-<div style="max-width: 700px; margin: 0 auto;">
-  <img src="/post-img/django_models/1.png">
-</div>
+<img style="max-width: 700px;" src="/post-img/django_models/1.png">
 
 Now, let's walk through each block.
 
 ## Table with cats in database
 
-<div style="max-width: 500px; margin: 0 auto;">
-  <img src="/post-img/django_models/2.png">
-</div>
+<img style="max-width: 500px;" src="/post-img/django_models/2.png">
 
 We create a class (= a model) named `Cat`.
 
@@ -57,18 +51,14 @@ Let's fix it.
 
 ### Creating a new one
 
-<div style="max-width: 500px; margin: 0 auto;">
-  <img src="/post-img/django_models/3.png">
-</div>
+<img style="max-width: 500px;" src="/post-img/django_models/3.png">
 
 `create()` function helps us to create some rows.
 We just need to pass all the purry details into it.
 
 ### Finding a particular one
 
-<div style="max-width: 500px; margin: 0 auto;">
-  <img src="/post-img/django_models/4.png">
-</div>
+<img style="max-width: 500px;" src="/post-img/django_models/4.png">
 
 If you want to get cat's <strike>FBI file</strike> meow-xcuse me, the cat's info; then we can just use the `get()` function with one of the cat parameters.
 In the example, I use `pk` which means "primary key".
@@ -78,17 +68,13 @@ Most often, that would be the same as using `id`.
 
 ### Finding all the records
 
-<div style="max-width: 500px; margin: 0 auto;">
-  <img src="/post-img/django_models/5.png">
-</div>
+<img style="max-width: 500px;" src="/post-img/django_models/5.png">
 
 On top of that, you can access all cats from the database by using the `all()` function.
 
 ### Filtering out
 
-<div style="max-width: 500px; margin: 0 auto;">
-  <img src="/post-img/django_models/6.png">
-</div>
+<img style="max-width: 500px;" src="/post-img/django_models/6.png">
 
 Or do you need cats lighter than 3000 g?
 
@@ -103,9 +89,7 @@ So `weight_g__lt=3000` means "weight is less than 3000 g".
 
 ### Updating
 
-<div style="max-width: 500px; margin: 0 auto;">
-  <img src="/post-img/django_models/7.png">
-</div>
+<img style="max-width: 500px;" src="/post-img/django_models/7.png">
 
 Last time we weighed Luna, she was 3200 g.
 But now her weight is 3100 g.
@@ -117,9 +101,7 @@ Just one thing — we have to call `.save()` when we're done changing.
 
 ### Deleting, like, forever
 
-<div style="max-width: 500px; margin: 0 auto;">
-  <img src="/post-img/django_models/8.png">
-</div>
+<img style="max-width: 500px;" src="/post-img/django_models/8.png">
 
 We can delete one of our cats.
 Very sad.

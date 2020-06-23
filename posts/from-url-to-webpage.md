@@ -11,9 +11,7 @@ Here I want to show you what `urls.py` and `views.py` are for, and how they help
 
 Let's figure it out:
 
-<div style="max-width: 700px; margin: 0 auto;">
-  <img src="/post-img/from_url_to_webpage/1.png">
-</div>
+<img style="max-width: 700px;" src="/post-img/from_url_to_webpage/1.png">
 
 Say we open **https://cats.com/cats/** in our browser.
 

@@ -57,6 +57,13 @@ const Navigation = () => {
           position: fixed;
           z-index: 100;
         }
+
+        @media (max-width: 1024px) {
+          .navigation {
+            position: relative;
+            z-index: 0;
+          }
+        }
       `}</style>
     </div>
   )

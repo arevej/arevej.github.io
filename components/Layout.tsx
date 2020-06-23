@@ -33,10 +33,16 @@ const Layout = ({ pageTitle, children }: Props) => {
           cursor: default;
         }
 
-        @media (max-width: 600px) {
-          .grid {
-            width: 100%;
+        @media (max-width: 1024px) {
+          .container {
             flex-direction: column;
+            min-height: auto;
+          }
+        }
+
+        @media (max-width: 320px) {
+          .container {
+            padding: 40px;
           }
         }
       `}</style>

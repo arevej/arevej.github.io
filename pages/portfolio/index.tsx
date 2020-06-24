@@ -100,7 +100,7 @@ const Portfolio = () => {
     portfolioData.indexOf(project) === portfolioData.length - 1
 
   return (
-    <Layout pageTitle='Tim Kholod'>
+    <Layout pageTitle='TK: Portfolio'>
       <div className='container'>
         <SliderButton
           Icon={<ArrowUp />}

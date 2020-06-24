@@ -11,7 +11,7 @@ export default function Blog (props: Props) {
     (a, b) => Date.parse(b.frontmatter.date) - Date.parse(a.frontmatter.date)
   )
   return (
-    <PostLayout pageTitle='TK Blog'>
+    <PostLayout pageTitle='TK: Blog'>
       <h3>Python/Django</h3>
       {sortedPosts.map(post => (
         <PostLink postSlug={post.slug} text={post.frontmatter.title} />

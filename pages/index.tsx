@@ -64,7 +64,7 @@ const About = () => {
   }, [])
 
   return (
-    <Layout pageTitle='Tim Kholod'>
+    <Layout pageTitle='Tim Kholad'>
       <div className='line-container'>
         <AnimatedLine maxLineHeight={maxLineHeight} />
       </div>
@@ -76,7 +76,7 @@ const About = () => {
               src='/utils/avatar.png'
               width={250}
               height={250}
-              alt='The picture of Tim Kholod with skies and house on the background'
+              alt='The picture of Tim Kholad with skies and house on the background'
             />
             <SocialLinks />
           </div>
@@ -87,7 +87,7 @@ const About = () => {
             <h2>
               Hey,
               <br />
-              I’m <span style={{ color: Colors.yellow }}>Tim Kholod</span>
+              I’m <span style={{ color: Colors.yellow }}>Tim Kholad</span>
             </h2>
             <span>doing software</span>
             <span>learning languages</span>
